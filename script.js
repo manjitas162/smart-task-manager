@@ -89,3 +89,14 @@ if ("serviceWorker" in navigator) {
             });
     });
 }
+function toggleTheme() {
+    let body = document.body;
+    if (body.classList.contains('dark')) {
+        body.classList.remove('dark');
+        body.classList.add('floral');
+    } else if (body.classList.contains('floral')) {
+        body.classList.remove('floral');
+    } else {
+        body.classList.add('dark');
+    }
+}
