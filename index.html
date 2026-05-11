@@ -1,37 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Smart Task Manager</title>
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#4f46e5">
-<link rel="apple-touch-icon" href="icon-192.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Task Manager</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="apple-touch-icon" href="icon-192.png">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h1>Smart Task Manager</h1>
+        <h1>Smart Task Manager</h1>
 
-<div class="input-area">
-<input type="text" id="taskInput" placeholder="Enter your task">
+        <!-- Theme Buttons -->
+        <div class="theme-toggle">
+            <button onclick="setTheme('default')">Default</button>
+            <button onclick="setTheme('dark')">Dark</button>
+            <button onclick="setTheme('floral')">Floral</button>
+        </div>
 
-<select id="priority">
-<option value="High">High</option>
-<option value="Medium">Medium</option>
-<option value="Low">Low</option>
-</select>
+        <!-- Input Area -->
+        <div class="input-area">
 
-<button onclick="addTask()">Add Task</button>
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Enter your task"
+            >
 
-</div>
+            <select id="priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
 
-<ul id="taskList"></ul>
+            <button onclick="addTask()">Add</button>
 
-</div>
+        </div>
 
-<script src="script.js"></script>
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
